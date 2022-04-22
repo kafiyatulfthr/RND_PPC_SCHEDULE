@@ -1,0 +1,166 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Master {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- -----------------------TABEL, SEARCH, PAGINATION------------------- -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/boostrap-4.5.1.css') }}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/dataTables.bootstrap4.min.css') }}"> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></Script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery-3.5.1.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery.dataTables.min.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/dataTables.bootstrap4.min.js') }}"></script> -->
+  <!-- ------------------------------------------------------------------- -->
+
+    <div class="py-4">
+        <div class="d-flex justify-content-between w-100 flex-wrap">
+            <div class="mb-3 mb-lg-0">
+                <h1 class="h4">Master Kriteria Plan</h1>
+            </div>
+            <div>
+                <!-- Button Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Add Master</button>
+                <!-- Modal Content -->
+                <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card p-3 p-lg-4">
+                                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="text-center text-md-center mb-4 mt-md-0">
+                                            <h1 class="mb-0 h4">Add Master</h1>
+                                        </div>
+                                        <form action="#" class="mt-4">
+                                        <!-- Form -->
+                                        <div class="form-group mb-4">
+                                            <label for="id-plan">ID</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="id-kurikulum" autofocus required>
+                                                </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="grade-plan">Grade</label>
+                                            <select class="form-select" id="country" aria-label="Default select example">
+                                                <option selected disabled>Choose Operator Skill</option>
+                                                <option value="1">Grade A</option>
+                                                <option value="2">Grade B</option>
+                                                <option value="3">Grade C</option>
+                                                <option value="4">Training</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="plan-plan">Plan</label>
+                                            <select class="form-select" id="country" aria-label="Default select example">
+                                                <option selected disabled>Choose Plan</option>
+                                                <option value="1">Express</option>
+                                                <option value="2">Pesanan</option>
+                                                <option value="3">Model Biasa</option>
+                                            </select> 
+                                        </div>
+                                        <!-- End of Form -->
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-gray-800">Save</button>
+                                        </div>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal Content -->
+          </div>
+      </div>
+  </div>
+
+  <div class="card border-0 shadow mb-4">
+      <div class="card-body">
+          <div class="table-responsive">
+              <table id="example" class="table table-centered table-nowrap mb-0 rounded">
+                  <thead class="thead-light">
+                      <tr>
+                          <th class="border-0 rounded-start">Id</th>
+                          <th class="border-0">Grade</th>
+                          <th class="border-0 rounded-end">Plan</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN01</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade A</td>
+                            <td>Express</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN02</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade A</td>
+                            <td>Pesanan</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN03</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade A</td>
+                            <td>Model Biasa</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN04</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade B</td>
+                            <td>Pesanan</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN05</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade B</td>
+                            <td>Model Biasa</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN06</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Grade C</td>
+                            <td>Model Biasa</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td><a href="#" class="text-primary fw-bold">PLAN07</a> </td>
+                            <td class="fw-bold d-flex align-items-center">Training</td>
+                            <td>Model Biasa</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#example").DataTable();
+    });
+  </script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

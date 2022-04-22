@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Master {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- -----------------------TABEL, SEARCH, PAGINATION------------------- -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/boostrap-4.5.1.css') }}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/dataTables.bootstrap4.min.css') }}"> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></Script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery-3.5.1.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery.dataTables.min.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/dataTables.bootstrap4.min.js') }}"></script> -->
+  <!-- ------------------------------------------------------------------- -->
+
+    <div class="py-4">
+        <div class="d-flex justify-content-between w-100 flex-wrap">
+            <div class="mb-3 mb-lg-0">
+                <h1 class="h4">Master Masa Kerja</h1>
+            </div>
+        </div>
+    </div>
+
+  <div class="card border-0 shadow mb-4">
+      <div class="card-body">
+          <div class="table-responsive">
+              <table id="example" class="table table-centered table-nowrap mb-0 rounded">
+                  <thead class="thead-light">
+                      <tr>
+                          <th class="border-0 rounded-start">NIK</th>
+                          <th class="border-0">Nama Karyawan</th>
+                          <th class="border-0 rounded-end">Departemen</th>
+                          <th class="border-0 rounded-end">Masa Kerja</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">015643</td>
+                            <td class="fw-bold d-flex align-items-center">DEWI NURDINI</td>
+                            <td>11-RND</td>
+                            <td>3 Tahun 2 Bulan 1 Hari</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">016232</td>
+                            <td class="fw-bold d-flex align-items-center">RIANDONNI TURNIP</td>
+                            <td>11-RND</td>
+                            <td>2 Tahun 3 Bulan 1 Hari</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">016268</td>
+                            <td class="fw-bold d-flex align-items-center">RICKY TANZHAGITA D</td>
+                            <td>11-RND</td>
+                            <td>1 Tahun 2 Bulan 3 Hari</td>
+                        </tr>
+                        <!-- End of Item -->
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#example").DataTable();
+    });
+  </script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

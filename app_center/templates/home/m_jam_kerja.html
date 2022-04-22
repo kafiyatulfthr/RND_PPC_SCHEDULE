@@ -1,0 +1,132 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Master {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- -----------------------TABEL, SEARCH, PAGINATION------------------- -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/boostrap-4.5.1.css') }}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/dataTables.bootstrap4.min.css') }}"> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></Script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery-3.5.1.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery.dataTables.min.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/dataTables.bootstrap4.min.js') }}"></script> -->
+  <!-- ------------------------------------------------------------------- -->
+
+    <div class="py-4">
+        <div class="d-flex justify-content-between w-100 flex-wrap">
+            <div class="mb-3 mb-lg-0">
+                <h1 class="h4">Jam Kerja</h1>
+            </div>
+            <div>
+                <!-- Button Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Add Master</button>
+                <!-- Modal Content -->
+                <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card p-3 p-lg-4">
+                                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="text-center text-md-center mb-4 mt-md-0">
+                                            <h1 class="mb-0 h4">Add Master</h1>
+                                        </div>
+                                        <form action="#" class="mt-4">
+                                        <!-- Form -->
+                                        <div class="form-group mb-4">
+                                            <label for="shift">Shift</label>
+                                                <div class="input-group">
+                                                    <input type="number" class="form-control" id="id-kurikulum" autofocus required>
+                                                </div>
+                                        </div>
+                                        <div class="row">    
+                                            <div class="col-6 form-group mb-4">
+                                                <label for="jam-masuk">Jam Masuk</label>
+                                                <div class="input-group">
+                                                    <input type="time" class="form-control" id="nama-kurikulum" autofocus required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 form-group mb-4">
+                                                <label for="jam-pulang">Jam Pulang</label>
+                                                <div class="input-group">
+                                                    <input type="time" class="form-control" id="nama-kurikulum" autofocus required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">    
+                                            <div class="col-6 form-group mb-4">
+                                                <label for="awal-istirahat">Jam Awal Istirahat</label>
+                                                <div class="input-group">
+                                                    <input type="time" class="form-control" id="nama-kurikulum" autofocus required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 form-group mb-4">
+                                                <label for="akhir-istirahat">Jam Akhir Istirahat</label>
+                                                <div class="input-group">
+                                                    <input type="time" class="form-control" id="nama-kurikulum" autofocus required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Form -->
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-gray-800">Save</button>
+                                        </div>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal Content -->
+          </div>
+      </div>
+  </div>
+
+  <div class="card border-0 shadow mb-4">
+      <div class="card-body">
+          <div class="table-responsive">
+              <table id="example" class="table table-centered table-nowrap mb-0 rounded">
+                  <thead class="thead-light">
+                      <tr>
+                          <th class="border-0 rounded-start">Shift</th>
+                          <th class="border-0">Jam Masuk</th>
+                          <th class="border-0">Jam Awal Istirahat</th>
+                          <th class="border-0">Jam Akhir Istirahat</th>
+                          <th class="border-0">Jam Pulang</th>
+                          <th class="border-0 rounded-end">Total Jam Kerja</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">1</td>
+                            <td>08.00</td>
+                            <td>12.00</td>
+                            <td>13.00</td>
+                            <td>17.00</td>
+                            <td>8</td>
+                        </tr>
+                        <!-- End of Item -->
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#example").DataTable();
+    });
+  </script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

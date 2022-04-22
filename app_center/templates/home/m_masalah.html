@@ -1,16 +1,29 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Tables {% endblock %} 
+{% block title %} Master {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
+<!-- -----------------------TABEL, SEARCH, PAGINATION------------------- -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/boostrap-4.5.1.css') }}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/elo-table/dataTables.bootstrap4.min.css') }}"> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></Script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery-3.5.1.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/jquery.dataTables.min.js') }}"></script> -->
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/elo-table/dataTables.bootstrap4.min.js') }}"></script> -->
+  <!-- ------------------------------------------------------------------- -->
+
     <div class="py-4">
         <div class="d-flex justify-content-between w-100 flex-wrap">
             <div class="mb-3 mb-lg-0">
-                <h1 class="h4">Master Skill Operator</h1>
+                <h1 class="h4">Master Masalah</h1>
             </div>
             <div>
                 <!-- Button Modal -->
@@ -28,21 +41,21 @@
                                         <form action="#" class="mt-4">
                                         <!-- Form -->
                                         <div class="form-group mb-4">
-                                            <label for="id-skill">ID</label>
+                                            <label for="id-masalah">ID</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="id-skill" autofocus required>
+                                                    <input type="text" class="form-control" id="id-masalah" autofocus required>
                                                 </div>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="id-skill">Grade</label>
+                                            <label for="kategori-masalah">Kategori</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="nama-skill" autofocus required>
+                                                    <input type="text" class="form-control" id="kategori-masalah" autofocus required>
                                                 </div>
                                             </div>
                                         <div class="form-group mb-4">
-                                            <label for="id-skill">Keterangan</label>
+                                            <label for="keterangan-masalah">Keterangan</label>
                                                 <div class="input-group">
-                                                    <textarea type="text" class="form-control" id="ket-skill" autofocus required></textarea>
+                                                    <input type="text" class="form-control" id="keterangan-masalah" autofocus required>
                                                 </div>  
                                         </div>
                                         <!-- End of Form -->
@@ -63,68 +76,41 @@
   <div class="card border-0 shadow mb-4">
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-centered table-nowrap mb-0 rounded">
+              <table id="example" class="table table-centered table-nowrap mb-0 rounded">
                   <thead class="thead-light">
                       <tr>
                           <th class="border-0 rounded-start">Id</th>
-                          <th class="border-0">Grade Skill</th>
+                          <th class="border-0">Kategori</th>
                           <th class="border-0 rounded-end">Keterangan</th>
                       </tr>
                   </thead>
                   <tbody>
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDA</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade A
-                          </td>
-                          <td>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td>DEF001</td>
+                            <td>Human Error</td>
+                            <td>Lorem ipsum dolor sit amet</td>
+                        </tr>
+                        <!-- End of Item -->
 
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDB</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade B
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
-
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDC</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade C
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
-
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDT</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Training
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td>DEF002</td>
+                            <td>Teknik</td>
+                            <td>Lorem ipsum dolor sit amet</td>
+                        </tr>
+                        <!-- End of Item -->
                   </tbody>
               </table>
           </div>
       </div>
   </div>
 
+  <script>
+    $(document).ready(function () {
+      $("#example").DataTable();
+    });
+  </script>
 
 {% endblock content %}
 
