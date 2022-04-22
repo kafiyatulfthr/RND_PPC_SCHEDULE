@@ -34,9 +34,9 @@
               </div>
             </div>
 
-            <h4><i><center>Research & Development</center></i></h4>
+            <h4><b><center>Research & Development</center></b></h4>
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-
+            <!-- Home -->
             <ul class="nav flex-column pt-3 pt-md-0">
               <li class="nav-item">
                 <a href="/home.html" class="nav-link d-flex align-items-center">
@@ -46,6 +46,7 @@
                   <span class="mt-1 ms-1 sidebar-text">Home</span>
                 </a>
               </li>
+              <!-- Dashboard -->
               <li class="nav-item {% if 'dashboard' in segment %} active {% endif %}">
                 <a href="/dashboard.html" class="nav-link">
                   <span class="sidebar-icon">
@@ -54,14 +55,7 @@
                   <span class="sidebar-text">Dashboard</span>
                 </a>
               </li>
-              <li class="nav-item {% if 'transactions' in segment %} active {% endif %}">
-                <a href="/transactions.html" class="nav-link">
-                  <span class="sidebar-icon">
-                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
-                  </span>
-                  <span class="sidebar-text">Transactions</span>
-                </a>
-              </li>
+              <!-- Master -->
               <li class="nav-item {% if 'page-' in segment %} active {% endif %}">
                 <span
                   class="nav-link  collapsed  d-flex justify-content-between align-items-center"
@@ -80,23 +74,8 @@
                   id="submenu-pages" aria-expanded="false">
                   <ul class="flex-column nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="/m_skill.html">
-                        <span class="sidebar-text">Skill</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/m_kurikulum.html">
-                        <span class="sidebar-text">Kurikulum</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/m_masa_kerja.html">
-                        <span class="sidebar-text">Masa Kerja</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/m_kriteria_plan.html">
-                        <span class="sidebar-text">Kriteria Plan</span>
+                      <a class="nav-link" href="/m_grade.html">
+                        <span class="sidebar-text">Grade</span>
                       </a>
                     </li>
                     <li class="nav-item">
@@ -105,13 +84,75 @@
                       </a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="/m_karyawan.html">
+                        <span class="sidebar-text">Karyawan</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/m_kriteria_plan.html">
+                        <span class="sidebar-text">Kriteria Plan</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/m_kurikulum.html">
+                        <span class="sidebar-text">Kurikulum</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link" href="/m_masalah.html">
                         <span class="sidebar-text">Masalah</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/m_skill.html">
+                        <span class="sidebar-text">Skill Operator</span>
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
+              <!-- Transaction -->
+              <li class="nav-item {% if 'components-' in segment %} active {% endif %}">
+                <span
+                  class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                  data-bs-toggle="collapse" data-bs-target="#submenu-components">
+                  <span>
+                    <span class="sidebar-icon">
+                      <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
+                    </span> 
+                    <span class="sidebar-text">Transaction</span>
+                  </span>
+                  <span class="link-arrow">
+                    <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                  </span>
+                </span>
+                <div class="multi-level collapse {% if 'components-' in segment %} show {% endif %}" role="list"
+                  id="submenu-components" aria-expanded="false">
+                  <ul class="flex-column nav">
+                    <li class="nav-item {% if 'components-buttons' in segment %} active {% endif %}">
+                      <a class="nav-link" href="/t_bagi_pekerjaan.html">
+                        <span class="sidebar-text">Bagi Pekerjaan</span>
+                      </a>
+                    </li>
+                    <li class="nav-item {% if 'components-notifications' in segment %} active {% endif %}">
+                      <a class="nav-link" href="/components-notifications.html">
+                        <span class="sidebar-text">Sisipan Model</span>
+                      </a>
+                    </li>
+                    <li class="nav-item {% if 'components-forms' in segment %} active {% endif %}">
+                      <a class="nav-link" href="/components-forms.html">
+                        <span class="sidebar-text">Kapasitas 3D</span>
+                      </a>
+                    </li>
+                    <li class="nav-item {% if 'components-modals' in segment %} active {% endif %}">
+                      <a class="nav-link" href="/components-modals.html">
+                        <span class="sidebar-text">Reparasi</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Setting -->
               <li class="nav-item {% if 'settings' in segment %} active {% endif %}">
                 <a href="/settings.html" class="nav-link">
                   <span class="sidebar-icon">
@@ -120,6 +161,7 @@
                   <span class="sidebar-text">Settings</span>
                 </a>
               </li>
+              <!-- Tables -->
               <li class="nav-item {% if 'tables-bootstrap-' in segment %} active {% endif %}">
                 <span
                   class="nav-link  collapsed  d-flex justify-content-between align-items-center"
@@ -190,6 +232,16 @@
                   </ul>
                 </div>
               </li>
+
+              <li class="nav-item {% if 'transactions' in segment %} active {% endif %}">
+                <a href="/transactions.html" class="nav-link">
+                  <span class="sidebar-icon">
+                    <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
+                  </span>
+                  <span class="sidebar-text">Tbl Tbl</span>
+                </a>
+              </li>
+
               <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
             </ul>
           </div>

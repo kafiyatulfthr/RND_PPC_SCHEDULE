@@ -21,57 +21,23 @@
   <!-- ------------------------------------------------------------------- -->
 
     <div class="py-4">
+        <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+            <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                <li class="breadcrumb-item">
+                    <a href="/home.html">
+                        <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">Master</li>
+                <li class="breadcrumb-item active" aria-current="page">Skill Operator</li>
+            </ol>
+        </nav>
         <div class="d-flex justify-content-between w-100 flex-wrap">
             <div class="mb-3 mb-lg-0">
                 <h1 class="h4">Master Skill Operator</h1>
             </div>
-            <div>
-                <!-- Button Modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Add Master</button>
-                <!-- Modal Content -->
-                <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body p-0">
-                                <div class="card p-3 p-lg-4">
-                                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        <div class="text-center text-md-center mb-4 mt-md-0">
-                                            <h1 class="mb-0 h4">Add Master</h1>
-                                        </div>
-                                        <form action="#" class="mt-4">
-                                        <!-- Form -->
-                                        <div class="form-group mb-4">
-                                            <label for="id-skill">ID</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" id="id-skill" autofocus required>
-                                                </div>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="id-skill">Grade</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" id="nama-skill" autofocus required>
-                                                </div>
-                                            </div>
-                                        <div class="form-group mb-4">
-                                            <label for="id-skill">Keterangan</label>
-                                                <div class="input-group">
-                                                    <textarea type="text" class="form-control" id="ket-skill" autofocus required></textarea>
-                                                </div>  
-                                        </div>
-                                        <!-- End of Form -->
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-gray-800">Save</button>
-                                        </div>
-                                        </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Modal Content -->
-          </div>
-      </div>
-  </div>
+        </div>
+    </div>
 
   <div class="card border-0 shadow mb-4">
       <div class="card-body">
@@ -79,59 +45,51 @@
               <table id="example" class="table table-centered table-nowrap mb-0 rounded">
                   <thead class="thead-light">
                       <tr>
-                          <th class="border-0 rounded-start">Id</th>
-                          <th class="border-0">Grade Skill</th>
-                          <th class="border-0 rounded-end">Keterangan</th>
+                          <th class="border-0 rounded-start">NIK</th>
+                          <th class="border-0">Nama Karyawan</th>
+                          <th class="border-0 rounded-end">Grade</th>
                       </tr>
                   </thead>
                   <tbody>
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDA</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade A
-                          </td>
-                          <td>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">007662</td>
+                            <td class="fw-bold d-flex align-items-center">SIGIT SULISTIONO</td>
+                            <td>Grade A</td>
+                        </tr>
+                        <!-- End of Item -->
 
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDB</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade B
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">010344</td>
+                            <td class="fw-bold d-flex align-items-center">TONI WAHYUNTO</td>
+                            <td>Grade A</td>
+                        </tr>
+                        <!-- End of Item -->
 
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDC</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Grade C
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">016041</td>
+                            <td class="fw-bold d-flex align-items-center">RAPANCA</td>
+                            <td>Grade B</td>
+                        </tr>
+                        <!-- End of Item -->
 
-                      <!-- Item -->
-                      <tr>
-                          <td><a href="#" class="text-primary fw-bold">GRDT</a> </td>
-                          <td class="fw-bold d-flex align-items-center">
-                              Training
-                          </td>
-                          <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          </td>
-                      </tr>
-                      <!-- End of Item -->
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">016720</td>
+                            <td class="fw-bold d-flex align-items-center">DENY YULIANTO</td>
+                            <td>Grade C</td>
+                        </tr>
+                        <!-- End of Item -->
+
+                        <!-- Item -->
+                        <tr>
+                            <td class="text-primary fw-bold">016922</td>
+                            <td class="fw-bold d-flex align-items-center">FENNO SAMSUL NUR HAJID</td>
+                            <td>Training</td>
+                        </tr>
+                        <!-- End of Item -->
                   </tbody>
               </table>
           </div>
