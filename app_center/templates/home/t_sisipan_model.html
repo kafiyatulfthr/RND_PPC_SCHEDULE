@@ -30,14 +30,14 @@
                       </a>
                   </li>
                   <li class="breadcrumb-item">Transaction</li>
-                  <li class="breadcrumb-item active" aria-current="page">Bagi Pekerjaan</li>
+                  <li class="breadcrumb-item active" aria-current="page">Sisipan Model</li>
               </ol>
           </nav>
-          <h2 class="h4">Pembagian Pekerjaan</h2>
+          <h2 class="h4">Sisipan Model</h2>
       </div>
       <div class="btn-toolbar mb-2 mb-md-0">
           <!-- Button Modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Plan</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Input</button>
           <!-- Modal Content -->
           <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -46,80 +46,28 @@
                           <div class="card p-3 p-lg-4">
                               <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
                                   <div class="text-center text-md-center mb-4 mt-md-0">
-                                      <h1 class="mb-0 h4">Plan Kerja</h1>
+                                      <h1 class="mb-0 h4">Input Data</h1>
                                   </div>
                                   <form action="#" class="mt-4">
                                   <!-- Form -->
                                   <div class="form-group mb-4">
-                                    <label for="id-skill">Tanggal</label>
-                                        <div class="input-group">
-                                            <input type="date" class="form-control" id="id-skill" autofocus required>
-                                        </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                  <label for="plan-plan">Plan Kerja</label>
-                                  <select class="form-select" id="country" aria-label="Default select example">
-                                      <option selected disabled>Choose Plan</option>
-                                      <option value="1">XA</option>
-                                      <option value="2">XB</option>
-                                      <option value="3">XC</option>
-                                  </select> 
-                              </div>
-                              <div class="form-group mb-4">
-                                <label for="id-skill">NIK</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="id-skill" autofocus required>
-                                    </div>
-                              </div>
-                                  <!-- End of Form -->
-                                  <div class="d-grid">
-                                      <button type="submit" class="btn btn-gray-800">Submit</button>
+                                      <label for="id-skill">No Model</label>
+                                          <div class="input-group">
+                                              <input type="text" class="form-control" id="id-skill" autofocus required>
+                                          </div>
                                   </div>
-                                  </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- End of Modal Content -->
-
-          <!-- Button Modal -->
-          <div class="btn-group ms-2 ms-lg-3">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actual-form">+ Actual</button>
-          </div>
-          <!-- Modal Content -->
-          <div class="modal fade" id="actual-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body p-0">
-                          <div class="card p-3 p-lg-4">
-                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  <div class="text-center text-md-center mb-4 mt-md-0">
-                                      <h1 class="mb-0 h4">Actual Jam Kerja</h1>
-                                  </div>
-                                  <form action="#" class="mt-4">
-                                  <!-- Form -->
                                   <div class="form-group mb-4">
-                                    <label for="id-skill">Tanggal</label>
-                                        <div class="input-group">
-                                            <input type="date" class="form-control" id="id-skill" autofocus required>
-                                        </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                  <label for="plan-plan">Plan Kerja</label>
-                                  <select class="form-select" id="country" aria-label="Default select example">
-                                      <option selected disabled>Choose Plan</option>
-                                      <option value="1">XA</option>
-                                      <option value="2">XB</option>
-                                      <option value="3">XC</option>
-                                  </select> 
-                              </div>
-                              <div class="form-group mb-4">
-                                <label for="id-skill">NIK</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" id="id-skill" autofocus required>
-                                    </div>
-                              </div>
+                                      <label for="id-skill">Reparasi</label>
+                                          <div class="input-group">
+                                              <input type="text" class="form-control" id="nama-skill" autofocus required>
+                                          </div>
+                                      </div>
+                                    <div class="form-group mb-4">
+                                      <label for="id-skill">Jumlah Reparasi</label>
+                                          <div class="input-group">
+                                              <input type="number" class="form-control" id="nama-skill" autofocus required>
+                                          </div>
+                                      </div>
                                   <!-- End of Form -->
                                   <div class="d-grid">
                                       <button type="submit" class="btn btn-gray-800">Submit</button>
@@ -142,37 +90,22 @@
       <table id="example" class="table table-hover">
           <thead class="thead-light">
               <tr>
-                  <th class="border-0 rounded-start">NIK</th>
-                  <th class="border-0">Nama Karyawan</th>						
-                  <th class="border-0">Grade</th>
-                  <th colspan="2" class="border-0">01/05/2022</th>
-                  <th colspan="2" class="border-0">02/05/2022</th>
-                  <th colspan="2" class="border-0">03/05/2022</th>
-                  <th colspan="2" class="border-0">04/05/2022</th>
-                  <th colspan="2" class="border-0">05/05/2022</th>
-                  <th class="border-0 rounded-end">Sisa Jam</th>
-                  <!-- <th class="border-0">Status</th>
-                  <th class="border-0 rounded-end">Action</th> -->
+                  <th class="border-0 rounded-start">No Model</th>
+                  <th class="border-0">Point 3D</th>						
+                  <th class="border-0">Kode Reparasi</th>
+                  <th class="border-0">Ket Reparasi</th>
+                  <th class="border-0">Jumlah</th>
+                  <th class="border-0 rounded-end">Action</th>
               </tr>
           </thead>
           <tbody>
               <!-- Item -->
               <tr>
-                  <td class="fw-bold">007662</td>
-                  <td><span class="fw-bold">SIGIT SULISTIONO</span></td>
-                  <td><span class="fw-bold">Grade A</span></td>                        
-                  <td><span class="fw-normal">XA</span></td>
-                  <!-- <td><span class="fw-normal badge bg-primary">12</span></td> -->
-                  <td><span class="fw-normal">XB</span></td>
-                  <td><span class="fw-normal badge bg-success">10</span></td>
-                  <td><span class="fw-normal">XC</span></td>
-                  <td><span class="fw-normal badge bg-danger">10</span></td>
-                  <td><span class="fw-normal">XD</span></td>
-                  <td><span class="fw-normal badge bg-primary">8</span></td>
-                  <td><span class="fw-normal">XE</span></td>
-                  <td><span class="fw-normal badge bg-primary">8</span></td>
-                  <td><span class="fw-normal">3</span></td>
-                  <!-- <td><span class="badge rounded-pill bg-danger">incomplete</span></td>
+                  <td class="fw-bold">xxxx</td>
+                  <td><span class="fw-normal">12</span></td>
+                  <td><span class="fw-normal">REP002</span></td>                        
+                  <td><span class="fw-normal">3D Ulang</span></td>
+                  <td><span class="fw-normal">1</span></td>
                   <td>
                     <div class="btn-group">
                         <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -196,8 +129,39 @@
                             </svg> Delete </a>
                         </div>
                     </div>
-                  </td> -->
+                  </td>
               </tr>
+              <tr>
+                <td class="fw-bold">yyyy</td>
+                <td><span class="fw-normal">10</span></td>
+                <td><span class="fw-normal">REP001</span></td>                        
+                <td><span class="fw-normal">Revisi File</span></td>
+                <td><span class="fw-normal">1</span></td>
+                <td>
+                  <div class="btn-group">
+                      <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                        </svg>  
+                          <span class="icon icon-sm">
+                              <span class="fas fa-ellipsis-h icon-dark"></span>
+                          </span>
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu py-0">
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                          <svg class="dropdown-icon text-primary me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
+                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
+                          </svg> Edit </a>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                          <svg class="dropdown-icon text-danger me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                          </svg> Delete </a>
+                      </div>
+                  </div>
+                </td>
+            </tr>
 
           </tbody>
       </table>

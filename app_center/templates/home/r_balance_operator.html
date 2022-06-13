@@ -29,56 +29,13 @@
                           <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                       </a>
                   </li>
-                  <li class="breadcrumb-item">Transaction</li>
-                  <li class="breadcrumb-item active" aria-current="page">Kapasitas 3D</li>
+                  <li class="breadcrumb-item">Report</li>
+                  <li class="breadcrumb-item active" aria-current="page">Balance Operator</li>
               </ol>
           </nav>
-          <h2 class="h4">Kapasitas 3D</h2>
+          <h2 class="h4">Rekap Balance Operator</h2>
       </div>
-      <div class="btn-toolbar mb-2 mb-md-0">
-          <!-- Button Modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form">+ Input</button>
-          <!-- Modal Content -->
-          <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body p-0">
-                          <div class="card p-3 p-lg-4">
-                              <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  <div class="text-center text-md-center mb-4 mt-md-0">
-                                      <h1 class="mb-0 h4">Input Data</h1>
-                                  </div>
-                                  <form action="#" class="mt-4">
-                                  <!-- Form -->
-                                  <div class="form-group mb-4">
-                                      <label for="id-skill">No. Model</label>
-                                          <div class="input-group">
-                                              <input type="number" class="form-control" id="id-skill" autofocus required>
-                                          </div>
-                                  </div>
-                                  <div class="form-group mb-4">
-                                      <label for="id-skill">Point 3D</label>
-                                          <div class="input-group">
-                                              <input type="number" class="form-control" id="nama-skill" autofocus required>
-                                          </div>
-                                      </div>
-                                  <div class="form-group mb-4">
-                                      <label for="id-skill">Point Mal</label>
-                                          <div class="input-group">
-                                              <input type="number" class="form-control" id="nama-skill" autofocus required>
-                                          </div>
-                                      </div>
-                                  <!-- End of Form -->
-                                  <div class="d-grid">
-                                      <button type="submit" class="btn btn-gray-800">Submit</button>
-                                  </div>
-                                  </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- End of Modal Content -->
+      
           
           <div class="btn-group ms-2 ms-lg-3">
               <button type="button" class="btn btn-outline-gray-600">Export</button>
@@ -90,18 +47,26 @@
       <table id="example" class="table table-hover">
           <thead class="thead-light">
               <tr>
-                  <th class="border-0 rounded-start">No Model</th>
-                  <th class="border-0">Point 3D</th>						
-                  <th class="border-0">Point Mal</th>
+                  <th class="border-0 rounded-start">NIK</th>
+                  <th class="border-0">Nama Karyawan</th>						
+                  <th class="border-0">No Model</th>
+                  <th class="border-0">Target Jam</th>
+                  <th class="border-0">Riel Jam</th>
+                  <th class="border-0">Jam Kerja</th>
+                  <th class="border-0">Pencapaian</th>
                   <th class="border-0 rounded-end">Action</th>
               </tr>
           </thead>
           <tbody>
               <!-- Item -->
               <tr>
-                  <td class="fw-bold">XXXX</td>
+                  <td class="fw-bold">007662</td>
+                  <td><span class="fw-normal">SIGIT SULISTIONO</span></td>
+                  <td><span class="fw-normal">XXXX</span></td>
+                  <td><span class="fw-normal">12</span></td>                        
                   <td><span class="fw-normal">12</span></td>
-                  <td><span class="fw-normal">90</span></td>                        
+                  <td><span class="fw-normal">8</span></td>
+                  <td><span class="fw-normal">100%</span></td>
                   <td>
                     <div class="btn-group">
                         <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -129,9 +94,13 @@
               </tr>
               
               <tr>
-                <td class="fw-bold">YYYY</td>
-                <td><span class="fw-normal">10</span></td>
-                <td><span class="fw-normal">90</span></td>                        
+                <td class="fw-bold">016041</td>
+                <td><span class="fw-normal">RAPANCA</span></td>                        
+                <td><span class="fw-normal">YYYY</span></td>
+                <td><span class="fw-normal">12</span></td>                        
+                <td><span class="fw-normal">14</span></td>
+                <td><span class="fw-normal">8</span></td>
+                <td><span class="fw-normal">85.71%</span></td>
                 <td>
                   <div class="btn-group">
                       <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
